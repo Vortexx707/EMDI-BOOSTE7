@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GrowthBoost - Free Social Media Growth Platform</title>
+    <meta name="description" content="Boost your social media presence instantly with free followers, likes, views, and engagement across Instagram, TikTok, YouTube, and more.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">GrowthBoost</div>
+                <div class="nav-links">
+                    <a href="#services">Services</a>
+                    <a href="#how-it-works">How It Works</a>
+                    <a href="#features">Features</a>
+                    <a href="#support">Support</a>
+                </div>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#services">Services</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#features">Features</a>
+        <a href="#support">Support</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Grow Your Social Media Presence Instantly</h1>
+                <p class="hero-description">Get free followers, likes, views, and engagement across all major platforms. No credit card required. Instant delivery.</p>
+                <div class="hero-buttons">
+                    <a href="#order" class="btn btn-primary">Start Growing Now</a>
+                    <a href="#how-it-works" class="btn btn-secondary">How It Works</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-number">2M+</div>
+                        <div class="stat-label">Active Users</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">50M+</div>
+                        <div class="stat-label">Orders Delivered</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Free Forever</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Choose Your Platform</h2>
+            <p class="section-description">Select from our wide range of social media platforms and start growing today</p>
+            <div class="services-grid">
+                <div class="service-card" data-platform="instagram">
+                    <div class="service-icon">📷</div>
+                    <h3>Instagram</h3>
+                    <p>Followers, Likes, Views, Comments</p>
+                </div>
+                <div class="service-card" data-platform="tiktok">
+                    <div class="service-icon">🎵</div>
+                    <h3>TikTok</h3>
+                    <p>Followers, Likes, Views, Shares</p>
+                </div>
+                <div class="service-card" data-platform="youtube">
+                    <div class="service-icon">▶️</div>
+                    <h3>YouTube</h3>
+                    <p>Subscribers, Views, Likes</p>
+                </div>
+                <div class="service-card" data-platform="facebook">
+                    <div class="service-icon">👍</div>
+                    <h3>Facebook</h3>
+                    <p>Likes, Followers, Shares</p>
+                </div>
+                <div class="service-card" data-platform="linkedin">
+                    <div class="service-icon">💼</div>
+                    <h3>LinkedIn</h3>
+                    <p>Connections, Followers, Likes</p>
+                </div>
+                <div class="service-card" data-platform="threads">
+                    <div class="service-icon">🧵</div>
+                    <h3>Threads</h3>
+                    <p>Followers, Likes, Reposts</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Form Section -->
+    <section id="order" class="order-section">
+        <div class="container">
+            <div class="order-card">
+                <h2>Start Your Free Growth</h2>
+                <p>Enter your details below and watch your engagement grow instantly</p>
+                <form id="orderForm" class="order-form">
+                    <div class="form-group">
+                        <label>Platform</label>
+                        <select id="platform" required>
+                            <option value="">Select Platform</option>
+                            <option value="instagram">Instagram</option>
+                            <option value="tiktok">TikTok</option>
+                            <option value="youtube">YouTube</option>
+                            <option value="facebook">Facebook</option>
+                            <option value="linkedin">LinkedIn</option>
+                            <option value="threads">Threads</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Service Type</label>
+                        <select id="serviceType" required>
+                            <option value="">Select Service</option>
+                            <option value="followers">Followers</option>
+                            <option value="likes">Likes</option>
+                            <option value="views">Views</option>
+                            <option value="comments">Comments</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Your Profile URL or Username</label>
+                        <input type="text" id="username" placeholder="@username or profile URL" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Quantity</label>
+                        <input type="number" id="quantity" placeholder="100" min="1" max="10000" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">Get Instant Growth</button>
+                </form>
+                <div id="orderProgress" class="order-progress hidden">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <p id="progressText">Processing your order...</p>
+                </div>
+                <div id="orderSuccess" class="order-success hidden">
+                    <div class="success-icon">✓</div>
+                    <h3>Order Delivered Successfully!</h3>
+                    <p id="successMessage"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <p class="section-description">Three simple steps to boost your social media presence</p>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3>Choose Platform</h3>
+                    <p>Select your social media platform and the type of engagement you want to boost</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3>Enter Details</h3>
+                    <p>Provide your profile URL or username and specify the quantity you need</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3>Get Instant Results</h3>
+                    <p>Watch your engagement grow immediately. No waiting, no delays, 100% free</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose GrowthBoost?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Instant Delivery</h3>
+                    <p>Get your followers, likes, and views delivered within seconds of placing your order</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💯</div>
+                    <h3>100% Free</h3>
+                    <p>No hidden fees, no credit card required. Completely free forever</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Safe & Secure</h3>
+                    <p>No password required. Your account security is our top priority</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">👥</div>
+                    <h3>Real Users</h3>
+                    <p>All engagement comes from real users, not bots or fake accounts</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌍</div>
+                    <h3>Global Reach</h3>
+                    <p>Connect with users from around the world across all major platforms</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📞</div>
+                    <h3>24/7 Support</h3>
+                    <p>Our support team is always available to help you grow your presence</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Users Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                    <p>"GrowthBoost helped me grow my Instagram from 500 to 10K followers in just a few weeks. The service is incredibly fast and completely free!"</p>
+                    <div class="testimonial-author">
+                        <strong>Sarah Johnson</strong>
+                        <span>Instagram Influencer</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                    <p>"I was skeptical at first, but the results speak for themselves. My TikTok videos now get thousands of views instantly. Highly recommended!"</p>
+                    <div class="testimonial-author">
+                        <strong>Mike Chen</strong>
+                        <span>Content Creator</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                    <p>"As a small business owner, GrowthBoost has been a game-changer for my Facebook page. More engagement means more customers!"</p>
+                    <div class="testimonial-author">
+                        <strong>Emily Rodriguez</strong>
+                        <span>Business Owner</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Boost Your Social Media?</h2>
+                <p>Join millions of users who are growing their presence with GrowthBoost</p>
+                <a href="#order" class="btn btn-primary btn-large">Start Growing Now - It's Free!</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="support" class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>GrowthBoost</h3>
+                    <p>The world's leading free social media growth platform since 2017.</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Services</h4>
+                    <a href="#services">Instagram</a>
+                    <a href="#services">TikTok</a>
+                    <a href="#services">YouTube</a>
+                    <a href="#services">Facebook</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Support</h4>
+                    <a href="#how-it-works">How It Works</a>
+                    <a href="#features">Features</a>
+                    <a href="#support">Contact Us</a>
+                    <a href="#">FAQ</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Legal</h4>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Refund Policy</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 GrowthBoost. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+      </html>
+          
